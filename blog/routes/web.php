@@ -19,6 +19,13 @@ Route::get('/menu', function(){
   return view('menu');
 });
 
+Route::get('/registrarEstudiantes',function(){
+    return view('registrarEstudiantes');
+});
+
+Route::get('/download/{file}','DownloadController@download');
+
+/*Solo de TEST*/
 Route::get('/welcome', function () {
     return view('welcome');
 });
