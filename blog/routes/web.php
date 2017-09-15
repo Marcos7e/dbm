@@ -23,6 +23,16 @@ Route::get('/registrarEstudiantes',function(){
     return view('registrarEstudiantes');
 });
 
+Route::get('/registrarMaterias',function(){
+    return view('registrarMaterias');
+});
+
+Route::get('/registrarMatricula',function(){
+    return view('registrarMatricula');
+});
+
+
+
 Route::get('/download/{file}','DownloadController@download');
 
 /*Solo de TEST*/

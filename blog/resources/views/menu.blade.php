@@ -33,7 +33,7 @@
         <h4 class="card-title">Registro de Matriculas</h4>
         <h6 class="card-subtitle mb-2 text-muted">Registro masivo de Estudiates x Materias</h6>
         <p class="card-text">Matricula masiva para estudiantes sobre la base de datos SISCADE.</p>
-        <a href="#" class="card-link">&raquo;Ir a Registro de Matriculas.</a>
+        <a href="{{url('/registrarMatricula')}}" class="card-link">&raquo;Ir a Registro de Matriculas.</a>
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@
         <h6 class="card-subtitle mb-2 text-muted">Registro masivo de Materias .</h6>
         <br>
         <p class="card-text">Registro masivo de materias sobre la base de datos SISCADE.</p>
-        <a href="#" class="card-link">&raquo;Ir a Registro masivo de Materias.</a>
+        <a href="{{url('/registrarMaterias')}}" class="card-link">&raquo;Ir a Registro masivo de Materias.</a>
       </div>
     </div>
   </div>
