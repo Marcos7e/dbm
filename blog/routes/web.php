@@ -35,6 +35,8 @@ Route::get('/registrarMatricula',function(){
 
 Route::get('/download/{file}','DownloadController@download');
 
+Route::get('upload','UploadController@upload');
+
 /*Solo de TEST*/
 Route::get('/welcome', function () {
     return view('welcome');

@@ -22,5 +22,17 @@
       </div>
   </div>
 
+  <div class="row">
+      <div class="col-lg-12 col-sm-12">
+          <div class="jumbotron">
+            <h4 class="display-4">2do Paso: Sube la plantilla Excel: </h4>
+                <form action="upload" id="upload" enctype="multipart/form-data">
+                      <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" > <br/>
+                      <input type="submit">
+                </form>
+          </div>
+      </div>
+  </div>
+
 </div>
 @endsection
