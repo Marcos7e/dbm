@@ -1,0 +1,1 @@
+powershell -> laravel new blog
