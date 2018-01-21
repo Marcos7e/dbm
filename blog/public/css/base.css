@@ -1,0 +1,20 @@
+html,body{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0;
+  background: #ccc;
+}
+.container
+{
+  margin-top: 5%;
+}
+.navbar{
+  background-color: #B40000;
+}
+.jumbotron{
+    background-color: #eee;
+}
+#footer{
+    background-color: #fff;
+}
