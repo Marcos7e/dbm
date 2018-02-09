@@ -31,11 +31,12 @@ Route::get('/registrarMatricula',function(){
     return view('registrarMatricula');
 });
 
-
-
 Route::get('/download/{file}','DownloadController@download');
 
-Route::get('upload','UploadController@upload');
+route::get('/upload', function(){
+      return view('main');
+});
+Route::post('/upload','UploadController@upload');
 
 /*Solo de TEST*/
 Route::get('/welcome', function () {

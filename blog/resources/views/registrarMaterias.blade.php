@@ -26,7 +26,8 @@
       <div class="col-lg-12 col-sm-12">
           <div class="jumbotron">
             <h4 class="display-4">2do Paso: Sube la plantilla Excel: </h4>
-                <form action="upload" id="upload" enctype="multipart/form-data">
+                <form class="form-horizontal" method="post" action="{{ url('/upload') }}" enctype="multipart/form-data">
+                  {{ csrf_field() }}
                       <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"> <br/>
                       <input type="submit">
                 </form>
