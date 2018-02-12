@@ -7,7 +7,7 @@
 <div class="container">
   <div class="row">
     <div class="jumbotron">
-      <h1 class="display-3">Registro masivo de Materias</h1>
+      <h1 class="display-3">Registro masivo de Estudiantes</h1>
       <hr>
     </div>
   </div>

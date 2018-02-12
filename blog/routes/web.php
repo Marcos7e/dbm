@@ -38,6 +38,8 @@ route::get('/upload', function(){
 });
 Route::post('/upload','UploadController@upload');
 
+Route::get('/migration', 'MigrationController@index');
+
 /*Solo de TEST*/
 Route::get('/welcome', function () {
     return view('welcome');

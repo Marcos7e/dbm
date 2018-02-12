@@ -8,9 +8,13 @@ class UploadController extends Controller
 {
     public function upload(Request $req)
     {
-            echo "<script>alert('There are no fields to generate a report');</script>";
-              $excelName = time()."_".$req->file('file')->getClientOriginalExtension();
+      $this->validate($req,[
+        'file' => 'required|file'
+      ]);
+
+              $fileExt = ".".$req->file('file')->getClientOriginalExtension();
+              $excelName = basename($req->file('file')->getClientOriginalName(), $fileExt)."_".time().$fileExt;
               $req->file->move( public_path('archivos_masivos'), $excelName);
-              return redirect('/');
+              return redirect('/migration');
     }
 }
