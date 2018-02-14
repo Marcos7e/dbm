@@ -1,9 +1,0 @@
-/vendor
-/tests
-.env.example
-.artisan
-composer
-composer.lock
-package
-phpunit
-readme
