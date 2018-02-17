@@ -1,8 +1,3 @@
-@extends('layout.master')
-
-@section('title', 'Control de Inscripciones')
-
-@section('content')
 
 <!-- Modal -->
 <div class="modal fade" id="processsMdl" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -15,7 +10,7 @@
         </button>
       </div>
       <div class="modal-body">
-                  <div id='content'></div>
+        Esta seguro de ejecutar el archivo seleccionado?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-success">Ejecutar</button>
@@ -37,7 +32,7 @@
         </button>
       </div>
       <div class="modal-body">
-          <div id='content'></div>
+        Esta seguro de ejecutar el archivo seleccionado?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger">Eliminar</button>
@@ -47,41 +42,3 @@
   </div>
 </div>
 <!--fin de modal-->
-
-<div class="container">
-  <div class="row">
-    <div class="jumbotron">
-      <h1 class="display-3" >Proceso Masivo de Inscripción</h1>
-      <hr>
-    </div>
-  </div>
-
-<div class="row">
-  <p>Seleccione un archivo del listado siguiente:</p>
-</div>
-
-<div class="row">
-   <div class="jumbotron">
-  <table class="table">
-      <thead>
-        <tr>
-          <th>Archivo</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        @foreach ($files as $file)
-        <tr>
-          <th>{{$file}}</th>
-          <th><button type="button"class="passfileforProcess btn btn-success" data-toggle="modal" data-target="#processsMdl" data-id='{{$file}}'>Procesar</button>  <button type="button" class="passfileforDelete btn btn-danger" data-toggle="modal" data-target="#deleteMdl" data-id='{{$file}}'>Eliminar</button></th>
-        </tr>
-        @endforeach
-      </tbody>
-    </table>
-
-
- </div>
-</div>
-
-
-@endsection
