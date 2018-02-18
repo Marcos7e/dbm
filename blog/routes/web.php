@@ -37,8 +37,9 @@ route::get('/upload', function(){
       return view('main');
 });
 Route::post('/upload','UploadController@upload');
-
 Route::get('/migration', 'MigrationController@index');
+Route::get('/deleteFile/{file}','FileManagementController@deleteFile');
+
 
 /*Solo de TEST*/
 Route::get('/welcome', function () {

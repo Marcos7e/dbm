@@ -40,18 +40,17 @@
           <div id='content'></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger">Eliminar</button>
+        <button type="button" class="btn btn-danger" onclick="deleteFile()">Eliminar</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
       </div>
     </div>
   </div>
 </div>
 <!--fin de modal-->
-
 <div class="container">
   <div class="row">
     <div class="jumbotron">
-      <h1 class="display-3" >Proceso Masivo de Inscripción</h1>
+      <h1 class="display-3">Proceso Masivo de Inscripción</h1>
       <hr>
     </div>
   </div>
@@ -73,7 +72,7 @@
         @foreach ($files as $file)
         <tr>
           <th>{{$file}}</th>
-          <th><button type="button"class="passfileforProcess btn btn-success" data-toggle="modal" data-target="#processsMdl" data-id='{{$file}}'>Procesar</button>  <button type="button" class="passfileforDelete btn btn-danger" data-toggle="modal" data-target="#deleteMdl" data-id='{{$file}}'>Eliminar</button></th>
+          <th><button type="button"class="passfileforProcess btn btn-success" data-toggle="modal" data-target="#processsMdl" data-id='{{$file}}' value='{{$file}}' id='btnProcesar'>Procesar</button>  <button type="button" class="passfileforDelete btn btn-danger" data-toggle="modal" data-target="#deleteMdl" data-id='{{$file}}' value='{{$file}}' id='btnEliminar'>Eliminar</button></th>
         </tr>
         @endforeach
       </tbody>
