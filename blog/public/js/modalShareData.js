@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 var lastFileSelected = '';
 
   $(document).on('click','.passfileforProcess',function(){
@@ -17,11 +17,25 @@ var lastFileSelected = '';
     $('.modal-body #content').html(texto);
   });
 
-   function deleteFile(){
-    $.ajax({
-      type: 'GET',
-      url: "/deleteFile/"+lastFileSelected,
-      success: function(result){
-      console.log('hola Alex!');
-   }});
-   };
+  $(document).on('click','.DeleteFile',function(){
+    var fileName = $(this).data('id');
+      $.ajax({
+        url:"/dbm/blog/public/deleteFile",
+        type: "post",
+        data:{"file" : lastFileSelected},
+        success: function(res)
+        {
+          // window.location = "/dbm/blog/public/migration"
+         console.log("deleted: "+lastFileSelected)}
+      });
+
+    });
+
+
+   // function deleteFile(){
+   //  $.ajax({
+   //    type: 'GET',
+   //    url: "/deleteFile/"+lastFileSelected,
+   //    success: function(result){
+   //    console.log('hola Alex!');
+   // }});
